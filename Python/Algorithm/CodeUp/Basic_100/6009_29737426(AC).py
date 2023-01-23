@@ -1,0 +1,2 @@
+﻿innum = input()
+print(innum)
