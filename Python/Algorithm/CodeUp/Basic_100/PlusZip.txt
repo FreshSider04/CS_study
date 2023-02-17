@@ -1,0 +1,9 @@
+#조건문
+if와 elif의 차이점 :: if ~ elif 구조는 앞의 조건이 참이면 뒤의 조건문은 더 이상 실행하지 않음. 하지만 if 문으로만 쓰여있다면 참, 거짓 여부와 관계없이 항상 실행하게 되는 것
+
+#비트단위논리연산자
+** 비트단위(bitwise) 연산자는,
+~(bitwise not), &(bitwise and), |(bitwise or), ^(bitwise xor),
+<<(bitwise left shift), >>(bitwise right shift) ---> 만약 a = 12; print(a >> 2)면 반의 반 
+가 있다.
+
