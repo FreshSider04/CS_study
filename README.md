@@ -29,5 +29,5 @@
   </div>
   
   <div align=center>
-  <h3>This is a space where I upload my university assignments, my programming studies, and personal projects.</h3>
+  <h3>This is a space where I upload my university assignments, my programming studies.</h3>
   </div>
