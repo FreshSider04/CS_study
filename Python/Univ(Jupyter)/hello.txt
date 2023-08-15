@@ -1,0 +1,12 @@
+1. print(), 
+2. operator
+3. data type :string, list, tuple
+4. if, if~else, if~elif~else
+5.for~in, whilefile input/output!!
+regular expression!!
+file input/output!!
+regular expression!!
+file input/output!!
+regular expression!!
+file input/output!!
+regular expression!!
