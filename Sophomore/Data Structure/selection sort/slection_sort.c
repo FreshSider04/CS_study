@@ -7,7 +7,7 @@ void printArr(int [], int *);
 int main(void)
 {
     int arrLen = 13;
-    int arr[] = {23, 34, 32, 17, 89, 102, 45, 67, 9, 20, 1, 8, 3};
+    int arr[] = {23, 34, 32, 17, 1, 102, 45, 67, 1, 20, 1, 8, 3};
 
     printf("\nBefore Array\n");
     printArr(arr, &arrLen);
