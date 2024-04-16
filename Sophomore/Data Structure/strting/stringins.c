@@ -15,18 +15,25 @@ void stringins(char *s, char *t, int i)
 {
     char string[MaxSize], *temp = string;
 
+    // Process Error
     if (i < 0 || i > strlen(s))
     {
         fprintf(stderr, "Position is out of bounds \n");
         exit(EXIT_FAILURE);
     }
+
+    // s가 비어있는 경우
     if (!strlen(s))
     {
+        // s에 t 내용이 채워집니다
         strcpy(s, t);
     }
+    // t > 0 경우
     else if (strlen(t))
     {
         strncpy(temp, s, i);
+        temp[i] = '\0';
+
         strcat(temp, t);
         strcat(temp, (s+i));
         strcpy(s, temp);
@@ -35,30 +42,7 @@ void stringins(char *s, char *t, int i)
 
 int main(void)
 {
-    // Case 1: 문자열 s의 시작 부분에 t 삽입
-    printf("Before: %s\n", s);
-    stringins(s, t, 0);
-    printf("After inserting '%s' at position 0: %s\n", t, s);
-
-    // s를 초기화
-    strcpy(s, "amobile");
-
-    // Case 2: 문자열 s의 중간에 t 삽입
-    stringins(s, t, 4);
-    printf("After inserting '%s' at position 4: %s\n", t, s);
-
-    // s를 초기화
-    strcpy(s, "amobile");
-
-    // Case 3: 문자열 s의 끝에 t 삽입
-    int pos = strlen(s); // s의 끝 위치
-    stringins(s, t, pos);
-    printf("After inserting '%s' at position %d (end): %s\n", t, pos, s);
-
-    // s를 초기화
-    strcpy(s, "amobile");
-
-    // Case 4: i가 문자열 s의 범위를 벗어난 경우는 프로그램이 종료될 것이므로 생략
-
+    stringins(s, t, 1);
+    printf("%s\n", s);
     return EXIT_SUCCESS;
 }
