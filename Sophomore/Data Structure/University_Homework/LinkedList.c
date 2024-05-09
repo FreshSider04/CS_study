@@ -1,53 +1,106 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef int element;
-typedef struct ListNode{
-    element data;
-    struct ListNode *link;
-} ListNode;
+typedef struct Node {
+    int data;
+    struct Node *link;
+}Node;
 
+void insert(Node* head, int index, int data)
+{
+    int k = index;
+    Node *preNode = head;
+    Node* insertNode = (Node*) malloc(sizeof(Node));
+    insertNode->data = data;
 
+    while (k-- && preNode != NULL)
+    {
+        preNode = preNode->link;
+    }
 
-ListNode* firstInsert(ListNode *head, element value){
-    ListNode *p=(ListNode *)malloc(sizeof(ListNode));
-    p->data=value;
-    p->link=head;
-    head=p;
-    return head;
+    if (preNode == NULL)
+    {
+        free(insertNode);
+        return;
+    }
+
+    insertNode->link = preNode->link;
+    preNode->link = insertNode;
 }
 
-ListNode* insert(ListNode *head,ListNode* pre, element value){
-    ListNode *p=(ListNode *)malloc(sizeof(ListNode));
-    p->data=value;
-    p->link=pre->link;
-    pre->link=p;
-    return head;
+void delete(Node* head, int index)
+{
+    int k = index;
+    Node* temp = head;
+    Node* trash = NULL;
+
+    while (k-- && temp != NULL)
+    {
+        temp = temp->link;
+    }
+    if (temp == NULL || temp->link == NULL)
+    {
+        return;
+    }
+
+    trash = temp->link;
+    temp->link = trash->link;
+    free(trash);
 }
 
-ListNode* delete(ListNode *head,ListNode *pre){
-    ListNode *removed;
-    removed=pre->link;
-    pre->link=removed->link;
-    free(removed);
-    return head;
+int search(Node *head, int value)
+{
+    if(head->link == NULL)
+    {
+        return -1;
+    }
+    int index = 0;
+    Node *temp = head->link;
+
+    while (temp->data != value)
+    {
+        index++;
+        temp = temp->link;
+
+        if (temp == NULL)
+        {
+            return -1;
+        }
+    }
+
+    return index;
+    
 }
 
-void printL(ListNode *head){
-    for (ListNode *p=head;p!=NULL;p=p->link){
-        printf("%d->",p->data);
+void printList(Node *head)
+{
+    printf("Print Linked List : \n");
+    for (; head; head = head->link)
+    {
+        printf("%d -> ", head->data);
     }
     printf("NULL\n");
+    
 }
-int main() {
-    ListNode *head=NULL;
+int main(void)
+{
+    Node *head = (Node* )malloc(sizeof(Node));
+    head->data = 0;
+    head->link = NULL;
 
-    // 1 ~ 5까지 무작위로 삽입
-    for(int i = 1; i <= 5; i++){
-        head = firstInsert(head,i);
-        printL(head);
-        printf("\n");
-    }
+    insert(head, 0, 1);
+    insert(head, 1, 2);
+    insert(head, 2, 3);
+    insert(head, 3, 4);
+    insert(head, 2, 12);
 
-    return 0;
+    printList(head);
+
+    delete(head, 3);
+
+    printList(head);
+
+    printf("Serched index : \n");
+    printf("%d\n", search(head, 1));
+
 }
