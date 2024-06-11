@@ -1,0 +1,9 @@
+|half_adder
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/FreshSider/Desktop/Young/Seg_2digit/cnt8/cnt8.v
+source_file = 1, C:/Users/FreshSider/Desktop/Young/Seg_2digit/cnt8/db/cnt8.cbx.xml
+design_name = cnt8
+instance = comp, \outclock_c~output\, outclock_c~output, cnt8, 1
+instance = comp, \clock_c~input\, clock_c~input, cnt8, 1
+instance = comp, \clock_c~inputclkctrl\, clock_c~inputclkctrl, cnt8, 1
+instance = comp, \count[0]~2\, count[0]~2, cnt8, 1
+instance = comp, \count[0]\, count[0], cnt8, 1
+instance = comp, \count[1]~1\, count[1]~1, cnt8, 1
+instance = comp, \count[1]\, count[1], cnt8, 1
+instance = comp, \count[2]~0\, count[2]~0, cnt8, 1
+instance = comp, \count[2]\, count[2], cnt8, 1

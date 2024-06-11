@@ -1,0 +1,40 @@
+|cnt
+clk => clk.IN1
+outclk <= cnt8:U4.port1
+
+
+|cnt|cnt8:U0
+clock_c => count[0].CLK
+clock_c => count[1].CLK
+clock_c => count[2].CLK
+outclock_c <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cnt|cnt8:U1
+clock_c => count[0].CLK
+clock_c => count[1].CLK
+clock_c => count[2].CLK
+outclock_c <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cnt|cnt8:U2
+clock_c => count[0].CLK
+clock_c => count[1].CLK
+clock_c => count[2].CLK
+outclock_c <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cnt|cnt8:U3
+clock_c => count[0].CLK
+clock_c => count[1].CLK
+clock_c => count[2].CLK
+outclock_c <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cnt|cnt8:U4
+clock_c => count[0].CLK
+clock_c => count[1].CLK
+clock_c => count[2].CLK
+outclock_c <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+

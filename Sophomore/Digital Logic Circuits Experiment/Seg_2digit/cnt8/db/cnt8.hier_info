@@ -1,0 +1,7 @@
+|cnt8
+clock_c => count[0].CLK
+clock_c => count[1].CLK
+clock_c => count[2].CLK
+outclock_c <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+

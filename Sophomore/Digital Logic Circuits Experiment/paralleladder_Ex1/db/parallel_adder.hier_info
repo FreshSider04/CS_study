@@ -1,0 +1,121 @@
+|parallel_adder
+A0 => A0.IN1
+A1 => A1.IN1
+A2 => A2.IN1
+A3 => A3.IN1
+B0 => B0.IN1
+B1 => B1.IN1
+B2 => B2.IN1
+B3 => B3.IN1
+S0 <= full_adder:FA0.port3
+S1 <= full_adder:FA1.port3
+S2 <= full_adder:FA2.port3
+S3 <= full_adder:FA3.port3
+C0 => C0.IN1
+C4 <= full_adder:FA3.port4
+
+
+|parallel_adder|full_adder:FA0
+x => x.IN1
+y => y.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+cout <= U3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|parallel_adder|full_adder:FA0|half_adder:HA1
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|parallel_adder|full_adder:FA0|half_adder:HA2
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|parallel_adder|full_adder:FA1
+x => x.IN1
+y => y.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+cout <= U3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|parallel_adder|full_adder:FA1|half_adder:HA1
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|parallel_adder|full_adder:FA1|half_adder:HA2
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|parallel_adder|full_adder:FA2
+x => x.IN1
+y => y.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+cout <= U3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|parallel_adder|full_adder:FA2|half_adder:HA1
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|parallel_adder|full_adder:FA2|half_adder:HA2
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|parallel_adder|full_adder:FA3
+x => x.IN1
+y => y.IN1
+cin => cin.IN1
+sum <= half_adder:HA2.port2
+cout <= U3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|parallel_adder|full_adder:FA3|half_adder:HA1
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|parallel_adder|full_adder:FA3|half_adder:HA2
+A => U1.IN0
+A => U2.IN0
+B => U1.IN1
+B => U2.IN1
+S <= U2.DB_MAX_OUTPUT_PORT_TYPE
+C <= U1.DB_MAX_OUTPUT_PORT_TYPE
+
+
